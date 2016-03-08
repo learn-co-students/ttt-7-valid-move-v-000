@@ -1,7 +1,6 @@
 # code your #valid_move? method here
 
 def valid_move?(board, position)
-
   position_taken?(board, position)
 end
 
@@ -14,27 +13,3 @@ def position_taken?(board, position)
     return false
   end
 end
-
-=begin
-def position_taken?(board, position)
-   if board[position] == "X"
-    return true
-    elsif board[position] == "O"
-    return true
-  elsif board[position] == " " || ""
-    return false
-    else return true
-   end
-end
-
-if position.between?(0,8)
-  if board[position] != "X" && board[position] != "O"
-    true
-  else
-    false
-  end
-else
-  false
-end
-
-=end
