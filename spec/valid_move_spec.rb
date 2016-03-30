@@ -1,6 +1,6 @@
 require_relative "../lib/valid_move.rb"
 
-describe './lib/valid_move.rb' do
+describe '#valid_move? ./lib/valid_move.rb' do
   # Needs more specs
 
   it 'returns true for a valid position on an empty board' do
