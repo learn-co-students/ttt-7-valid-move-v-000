@@ -1,7 +1,7 @@
 # code your #valid_move? method here
 def valid_move?(board,taken)
   !(board[taken] == "X" || board[taken] == "O")
-  !(position_taken(board,taken)) && taken.between?(0,8)
+  !(position_taken?(board,taken)) && taken.between?(0,8)
 
 
 end
