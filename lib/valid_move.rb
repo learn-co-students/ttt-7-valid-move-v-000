@@ -1,19 +1,18 @@
 def valid_move?(board, index)
-  if position_taken?(board, index) && 1 - 9
+  if position_taken?(board, index) && index.between?(0,8) 
     true
-  elsif position_taken?(board, index) && !(1-9)
+  else
     false
   end
-end# code your #valid_move? method here
+end
 
 
-
-  def position_taken?(board, index)
-    if board[index] == "X"
-      false
-    elsif board[index] == "O"
-      false
-    elsif board[index] == " " || ""
-      true
-    end
-  end# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
+def position_taken?(board, index)
+  if board[index] == "X"
+    false
+  elsif board[index] == "O"
+    false
+  elsif board[index] == " " || ""
+    true
+  end
+end# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
