@@ -5,7 +5,6 @@ if position_taken?(board, index)
  return false
 elsif position_taken?(board, index) == false && index = index.between?(0, 8)
   return true
-
 end
 end
 
@@ -18,5 +17,4 @@ return false
 else  board[index] == "X" || board[index] == "O"
 return true
 end
-
 end
