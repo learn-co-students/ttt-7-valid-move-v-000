@@ -1,5 +1,5 @@
 def valid_move?(board, index)
-  if index < board.length
+  if index < board.length && index >= 0
     return position_taken?(board, index)
   else
     false
