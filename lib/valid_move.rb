@@ -1,4 +1,10 @@
-# code your #valid_move? method here
+require_relative './position_taken.rb'
 
+def valid_move? (board, index)
 
-# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
+  spot_on_board = (index < 9 && index > -1)
+  spot_empty = !position_taken?(board,index)
+
+  return spot_on_board && spot_empty
+
+end
