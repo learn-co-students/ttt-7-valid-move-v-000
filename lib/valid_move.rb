@@ -2,12 +2,18 @@
 
 def valid_move? (board, index)
   #make sure the number is within the right scope
+  x = input_to_index(index)
   #make sure not to pass the adjusted index number into #position_taken? so that you get the right answer
   if position_taken?(board,index) != false || !(x.between?(-1,8))
     false
   elsif position_taken?(board,index) == false && x.between?(-1,8)
     true
   end
+end
+
+def input_to_index(num)
+  num = num.to_i
+  return num - 1
 end
 
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
