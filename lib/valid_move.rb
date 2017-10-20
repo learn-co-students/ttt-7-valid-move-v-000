@@ -1,7 +1,7 @@
 def valid_move?(board, index)
-if position_taken?(board, index) && index.between?(0, 8)
-  false
-else true
+if !position_taken?(board, index) && index.between?(0, 8)
+  true
+else false
 end
 end
 
@@ -14,5 +14,3 @@ else
 taken = true
 end
 end
-
-#The move is valid when the user picks 0:8, the space is empty and " " or " "
