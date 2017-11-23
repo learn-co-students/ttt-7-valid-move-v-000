@@ -1,5 +1,3 @@
 def valid_move?(board, index)
-  if(board[index] && board[index] == " ")
-    return true
- end
+  (index.between?(0, 8) && board[index] == " ")
 end
