@@ -1,7 +1,7 @@
 # code your #valid_move? method here
 def valid_move?(board, index)
   move = index.to_i - 1
-  if (position_taken?(board, index) || index.between?(0, 8) == false)
+  if (position_taken?(board, index) || index.between?(0, 8) == false) # <- syntax error, needed parentheses to get tests passings (doh!)
     return false
   else
     return true
