@@ -9,6 +9,13 @@ end
 #   index.between?(0,8) && !position_taken(board, index)
 # end
 
+#OR
+# def valid_move?(board, index)
+# if index.between?(0,8)
+#   if !position_taken?(board, index)
+#  end
+# end
+
 #notice the ! (not) in front of position taken
 #any comparative operation returns true or false. we don't need if to return true or false
 
