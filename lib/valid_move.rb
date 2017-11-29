@@ -4,6 +4,16 @@ def valid_move?(board,index)
   end
 end
 
+#This could also be solved with the following:
+# def valid_move?(board, index)
+#   index.between?(0,8) && !position_taken(board, index)
+# end
+
+#notice the ! (not) in front of position taken
+#any comparative operation returns true or false. we don't need if to return true or false
+
+# See alternative position_taken below my solution
+
 
 def position_taken?(board, index)
   if (board[index] == " " || board[index] == "" || board[index] == nil)
@@ -12,3 +22,8 @@ def position_taken?(board, index)
     taken = true
     end
 end
+
+
+#def position_taken?(board, index)
+# board[index] != " "
+#end
