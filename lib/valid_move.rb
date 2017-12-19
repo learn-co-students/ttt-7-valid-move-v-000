@@ -1,15 +1,15 @@
 # code your #valid_move? method here
-def valid_move?(board, position)
-  if position_taken?(board, position)
+def valid_move?(board, index)
+  if position_taken?(board, index)
     return false
-  elsif 0 <= position && position <= 8
+  elsif 0 <= index && index <= 8
     return true
   end
 end
 
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
-def position_taken?(board, position)
-  if board[position] == " " || board[position] == "" || board[position] == nil
+def position_taken?(board, index)
+  if board[index] == " " || board[index] == "" || board[index] == nil
     return false
   else
     return true
