@@ -1,24 +1,27 @@
 # code your #valid_move? method here
-board = []
-index = 0
+
 
 def position_taken? (board, index)
     if board [index]==" "
-      return false
+      return true
     elsif board[index]==""
       return false
     elsif board[index]==nil
       return false
     elsif board[index]=="X"||board[index]=="O"
-      return true
+      return false
     end
 end
 
 def valid_move?(board, index)
- if position_taken?==false
+ if position_taken?(board, index)==false
    return false
- else
-   return true
+ elsif position_taken?(board, index)==nil
+   return false
+elsif position_taken?(board, index)=="X"||board[index]=="O"
+  return true
+
+ else return true
  end
 
 
