@@ -19,4 +19,4 @@ if position_taken?(board, index) == false && index.between?(0, 8)
 else
   nil
 end
-end
+end 
