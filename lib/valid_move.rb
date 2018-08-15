@@ -1,14 +1,13 @@
 # code your #valid_move? method here
 
 def valid_move?(board, index)
-    if position_taken?(board, index) == true
-      return nil
-    elsif position_taken?(board, index) == false
-      return true
     
+    if (position_taken?(board, index) == false) && (board[index].between (0, 8) == true)
+      return true
   
-  #move must be present on board
-  #move must not already be filled
+    elsif position_taken?(board, index) == true
+      return nil
+    
   end
 end
 
