@@ -1,11 +1,7 @@
 def valid_move?(board, index)
-  if !position_taken?(board, index) && index.between?(0, 8)
-    return true
-  else 
-    return false  
-  end
+  !position_taken?(board, index) && index.between?(0, 8)
 end# code your #valid_move? method here
-
+#refactored to remove if/else statement altogher since valid_move?'s return statement is a boolean AND statement which will be the t/f info needed.  
 
 def position_taken?(board, index)
   if board[index] == " " || board[index] == ""
