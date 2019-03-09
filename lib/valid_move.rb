@@ -1,4 +1,5 @@
 def position_taken?(board,index)
+  #index = index - 1
   if(board[index] == " " || board[index] == nil || board[index] == "")
     return false
   else
@@ -8,7 +9,7 @@ end
 
 def valid_move?(board,index)
   if(position_taken?(board,index) == false)
-    if(index >= 1 && index <= 9)
+    if(index >= 0 && index <= 8)
       return true
     else
       return false
