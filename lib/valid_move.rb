@@ -9,18 +9,21 @@ def position_taken?(board, index)
       return true
       else  
       return false
+      
     end  
     
-    if index.to_i.between?(0, 8) && position_taken?(board, index.to_i - 1)  
-      return true 
+    if index.to_i.between?(0, 8) && !position_taken?(board, index.to_i - 1)  
+      return true
       else 
       return false 
    end 
    
-      if !position_taken?(board, index) 
+      if position_taken?(board, index) 
       return true if [" ", "", nil].include?(board[index])
+    else return false
       
     end  
     
-raise "#{board[index]} is not a valid move"  
-end
+raise "#{board[index]} is not a valid move"   
+end 
+
