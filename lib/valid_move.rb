@@ -1,4 +1,11 @@
-# code your #valid_move? method here
+def valid_move?(board, index)
+  return inbounds?(index) && !position_taken?(board, index)
+end
 
+def position_taken?(board, index)
+  return board[index] != " " && board[index] != "" && board[index] != nil
+end
 
-# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
+def inbounds?(index)
+  return index >= 0 && index < 9
+end
