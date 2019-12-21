@@ -1,4 +1,10 @@
 # code your #valid_move? method here
+def position_taken()
+  if board[index] = " " || "" then TRUE
+  else FALSE
+end
 
-
-# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
+def some_new_fabulous_method
+  if position_taken = FALSE then board[index] between?(0,8)
+  else nil
+end
