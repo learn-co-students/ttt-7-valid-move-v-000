@@ -1,4 +1,12 @@
-# code your #valid_move? method here
+board = Array.new(9, " ")
 
+def valid_move?(board,position)
+position.between?(0,8) && !position_taken?(board,position)
 
-# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
+end
+
+def position_taken?(board, position)
+
+ board[position] != " "
+
+ end
