@@ -1,4 +1,19 @@
-# code your #valid_move? method here
+def position_taken?(board, index)
+(board[index] == " " || board[index] == "" || board[index] == nil) ? false : true
+end
 
+  
+#1. #valid_move? method that accepts a board and an index to check?(position_taken?) AND returns TRUE if the move is valid and FALSE or nil if not. A valid move means that the submitted position is:
 
-# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
+#Present on the game board.
+#Not already filled with a token. 
+
+def valid_move?(board, index)
+  if !position_taken?(board, index) && (index).between?(0,8)
+    true
+  else 
+   false
+  end
+end
+   
+   
